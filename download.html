@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="3.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Student of the Year</title>
+    <style>
+        .container button:disabled {
+            background-color: #00b4d8;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin-top: 50px;
+            margin-left: 40%;
+        }
+        .container button {
+            background-color: #07d6d3;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            margin-top: 50px;
+            margin-left: 45%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+    <nav>
+        <div class="logo">
+            <img src="new23-removebg-preview (1).png" alt="logo">
+        </div>
+        <div class="nav-items">
+            <a href="index.html"><i class="fa-solid fa-house"></i>Home</a>
+            <a href="about.html"><i class="fa-solid fa-user-group"></i>ABOUT</a>
+            <a href="contact.html"><i class="fa-solid fa-envelope"></i>CONTACT</a>
+        </div>
+        <form action="#">
+            <input type="search" class="search-data" placeholder="search" required>
+            <button type="submit" class="fas fa-search"></button>
+        </form>
+    </nav>
+    <div class="container">
+        <a href="og1.mp4" download="student-of-the-year" target="_blank">
+            <button id="download" disabled>Download</button>
+        </a>
+    </div>
+    <script>
+        var downloadBtn = document.getElementById("download");
+        var counter = 5;
+        downloadBtn.innerHTML = "Please wait for 5 seconds.";
+        var id;
+
+        id = setInterval(function () {
+            counter--;
+            if (counter < 0) {
+                downloadBtn.innerHTML = "Download";
+                downloadBtn.removeAttribute('disabled'); // ✅ Fixed attribute name
+                clearInterval(id);
+            } else {
+                downloadBtn.innerHTML = "Please wait for " + counter.toString() + " seconds.";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

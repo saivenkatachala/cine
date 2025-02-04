@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="admin-container">
+        <h2>Admin Dashboard</h2>
+        <button onclick="getUsers()">View Users</button>
+        <div id="users-list"></div>
+    </div>
+
+    <script>
+        async function getUsers() {
+            const token = prompt('Enter admin token:');
+            if (!token) {
+                alert('Token required');
+                return;
+            }
+
+            const response = await fetch('http://localhost:8081/admin/users', {
+                headers: { 'Authorization': token }
+            });
+
+            const data = await response.json();
+            if (response.ok) {
+                const usersList = document.getElementById('users-list');
+                usersList.innerHTML = '';
+                data.forEach(user => {
+                    usersList.innerHTML += `<p>${user.username} - ${user.email}</p>`;
+                });
+            } else {
+                alert(data.message);
+            }
+        }
+    </script>
+
+</body>
+</html>

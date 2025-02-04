@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="3.jpg">
+    <title>CINE WAVE - Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        /* Custom CSS for the Contact Page */
+        .contact-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #2c2e30;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .contact-container h1 {
+            font-family: 'EB Garamond', serif;
+            letter-spacing: 10px;
+            margin-bottom: 20px;
+            color: #00b4d8;
+        }
+
+        .contact-container p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid rgba(155, 155, 155, 0.2);
+            border-radius: 5px;
+            background: #1e232b;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #aaa;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        .contact-form button {
+            padding: 10px 20px;
+            background: #038da8;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background: #06c4ea;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <img src="new23-removebg-preview (1).png" alt="logo">
+        </div>
+        <div class="nav-items">
+            <a href="index.html"><i class="fa-solid fa-house"></i>HOME</a>
+            <a href="about.html"><i class="fa-solid fa-user-group"></i>ABOUT</a>
+            <a href="#"><i class="fa-solid fa-envelope"></i>CONTACT</a>
+        </div>
+        <form action="#">
+            <input type="search" class="search-data" placeholder="search" required>
+            <button type="submit" class="fas fa-search"></button>
+        </form>
+    </nav>
+
+    <!-- Contact Section -->
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <p>Have a question, suggestion, or issue? We'd love to hear from you! Fill out the form below, and we'll get back to you as soon as possible.</p>
+
+        <form class="contact-form" action="#" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="issue" placeholder="Describe your issue or message..." required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    <div id="footer">
+        <p class="alignleft">
+            <a href="#">Contact |</a>
+            <a href="des.html">DCMA |</a>
+            <a href="term.html">Terms and Conditions </a>
+        </p>
+        
+            <p class="alignright">
+                <a href="#">&#169; 2025  CINEWAVE</a>
+            </p>
+        
+    </div>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="scrpit.js"></script>
+</body>
+</html>
