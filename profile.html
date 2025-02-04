@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="profile-container">
+        <h2>Your Profile</h2>
+        <p id="username"></p>
+        <p id="email"></p>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <script>
+        async function fetchProfile() {
+            const token = localStorage.getItem('token');
+            if (!token) {
+                window.location.href = 'login.html'; // Redirect to login if not logged in
+                return;
+            }
+
+            const response = await fetch('http://localhost:8081/profile', {
+                headers: { 'Authorization': token }
+            });
+
+            const data = await response.json();
+            if (response.ok) {
+                document.getElementById('username').textContent = `Username: ${data.username}`;
+                document.getElementById('email').textContent = `Email: ${data.email}`;
+            } else {
+                alert(data.message);
+            }
+        }
+
+        function logout() {
+            localStorage.removeItem('token');
+            window.location.href = 'login.html'; // Redirect to login page after logout
+        }
+
+        fetchProfile();
+    </script>
+
+</body>
+</html>
