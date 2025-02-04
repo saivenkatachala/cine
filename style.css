@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Montserrat&display=swap');
+*{
+    margin :0;
+    padding:0;
+    outline:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat',sans-serif;
+}
+body{
+    background: #282828;
+    overflow-x:hidden;
+}
+nav{
+    background: #2c2e30;
+    display:flex;
+    text-align:right;
+    align-items:center ;
+    height: 60px;
+    padding: 0 100px;
+}
+nav .logo {
+    cursor: pointer;
+    width: 250px; /* Adjust width dynamically */
+    height:auto; /* Set desired height */
+    /* Ensure it fits navbar */
+}
+
+nav .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; 
+}
+
+
+nav .nav-items{
+    display: flex;
+    flex:1;
+    padding:0 0 0 40px;
+    margin-left:330px;
+
+}
+nav .nav-items a{
+    color:#fff;
+    font-size: 13px ;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 5px;
+    margin-left: 15px;
+}
+nav .nav-items a i{
+    color:#00b4d8;
+    padding:5px;
+}
+nav form{
+    display:flex;
+    height:40px;
+    padding:2px;
+    background:#1e232b;
+    min-width: 18% !important;
+    border-radius: 30px;
+    border:1px solid rgba(155,155,155,0.2);
+
+}
+nav form .search-data{
+    width:100%;
+    height:100%;
+    padding :0 10px;
+    color:#fff;
+    font-size: 17px;
+    border:none;
+    font-weight: 500;
+    background: none;
+
+}
+nav form button{
+    padding:0 15px;
+    color: #fff;
+    font-size:17px;
+    background:#038da8;
+    border:none;
+    border-top-right-radius: 17px;
+    border-bottom-right-radius:17px ;
+    cursor: pointer;
+}
+nav form button:hover{
+    background: #06c4ea;
+
+}
+.content{
+    margin-top:30px;
+    text-align: center;
+    color:white;
+}
+.content h1{
+    justify-content: space-between;
+    letter-spacing: 10px;
+    font-family: 'EB Garamond',serif;
+}
+.content p{
+    margin-top: 30px;
+    
+}
+.content p i{
+    color:#00b4d8;
+}
+.content .underline{
+    width:15%;
+    height:20px;
+}
+.movie-items{
+    width: 100%;
+    height: 10%;
+    margin-top: 30px;
+    margin-left: 1%;
+    margin-bottom: 5%;
+    padding:20px;
+}
+.column{
+    float:left;
+    width: 16.66%;
+    cursor: pointer;
+}
+.column img{
+    border-radius: 10px;
+}
+.row::after{
+    content:' ';
+    clear:both;
+    display: table;
+   
+}
+.column h4,p{
+    color:white;
+
+}
+.column:hover{
+    scale:1.1;
+
+}
+.carousel-container{
+    position:relative;
+    width:100%;
+    height:450px;
+    padding:20px 0;
+    overflow-x: hidden;
+    margin-top: 80px;
+
+}
+.carousel{
+    display:flex;
+    width:92%;
+    height:100%;
+    position:relative;
+    margin: auto;
+    background: #000;
+
+}
+.slider{
+    flex:0 0 auto;
+    margin-right: 30px;
+    position: relative;
+    background: rgb(0,0,0,0.5);
+    border-radius:5px;
+    width:100%;
+    height:100%;
+    transition: 1s;
+    left:0;
+    overflow: hidden;
+}
+.slider img{
+    width:70%;
+    min-height: 100%;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+}
+.slide-content{
+    position: absolute;
+    width:50%;
+    height:100%;
+    z-index: 2;
+    background: linear-gradient(to right,#030b17 80%,#0c111b00);
+    color:white;
+
+}
+.movie-title{
+    padding:50px;
+    text-transform: capitalize;
+    margin-top:80px;
+}
+.movie-des{
+    width:80%;
+    line-height:30px;
+    padding-left:50px;
+    margin-top: 30px;
+    opacity:0.8 ;
+}
+
+
+.content p img{
+    float: left;
+    margin-left: 60px;
+    border-radius: 15px;
+    margin-right: 60px;
+}
+.title{
+    font-size: 50px;
+    font-weight:bold ;
+    text-align: left;
+}
+.year{
+    font-size: 20px;
+    margin-top: 30px;
+    text-align: left;
+}
+.genres{
+    font-size: 20px;
+    text-align: left;
+
+}
+.cast span{
+    font-weight:bold;
+    color:white;
+}
+.cast{
+    margin-top: 40px;
+    font-size:15px;
+    color:#7e7979;
+    text-align:left;
+
+}
+.director span{
+    font-weight:bold;
+    color:white;
+}
+.director{
+    margin-top: 10px;
+    font-size:15px;
+    color:#7e7979;
+    text-align:left;
+
+}
+.buttons{
+    margin-top: 5%;
+
+}
+.btn{
+    text-decoration: none;
+    color:white;
+    margin-top: 30px;
+}
+.btn1{
+    border:2px solid black;
+    background-color: black;
+    padding:20px 40px 20px 40px;
+    font-size:20px;
+    border-radius: 20px;
+    
+}
+.btn1 span{
+    margin-left: 10px;
+}
+.btn2{
+    border:2px solid #00b4d8;
+    background-color: #00b4d8;
+    padding:20px 40px 20px 40px;
+    font-size:20px;
+    border-radius: 20px;
+    margin-left: 20px;
+    
+}
+.btn2 span{
+    margin-left: 10px;
+}
+.btn3{
+    border:2px solid #00b4d8;
+    background-color: #00b4d8;
+    padding:20px 40px 20px 40px;
+    font-size:20px;
+    border-radius: 20px;
+    margin-left: 25px;
+    
+}
+.btn3 span{
+    margin-left: 10px;
+}
+.video{
+    padding:40px;
+    padding-bottom: 0px;
+    margin: 40px;
+    margin-bottom: 0;
+    border:none;
+}
+.syn{
+    margin-left: 70px;
+    margin-top: 40px;
+
+}
+.syn span{
+    color:#00b4d8;
+    font-weight: bold;
+}
+#footer{
+    background-color: #1e232b;
+    margin-top:20px;
+    height: 90px;
+
+}
+#footer a{
+    text-decoration: none;
+    color: white;
+    margin-top: 10px;
+}
+.alignleft{
+    float:left;
+    padding:30px;
+    margin-left:40px;
+}
+.alignright{
+    float:right;
+    padding:30px;
+    margin-right:40px;
+}
+
+
+
+
+
+
+.profile-container {
+    position: relative;
+    cursor: pointer;
+    margin-left: 10px;
+    color:#00b4d8;
+    padding:20px;
+
+}
+
+.profile-icon {
+    font-size: 28px; /* Slightly larger */
+    padding: 5px; /* Add some space */
+    color: #00b4d8;
+}
+
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    background: #00b4d8;
+    width: 150px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.profile-dropdown a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.profile-dropdown a:hover {
+    background: #00b4d8;
+}
+
+/* Show dropdown when active */
+.profile-container.active .profile-dropdown {
+    display: block;
+}
+
+
+
+
+
+
